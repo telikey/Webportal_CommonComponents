@@ -1,0 +1,110 @@
+<ng-template #innerLeft>
+  <div *ngIf="leftViewContext">
+    <ng-container
+      *ngTemplateOutlet="left; leftViewContext: leftViewContext"
+    ></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #innerTop>
+  <div *ngIf="topViewContext">
+    <ng-container
+      *ngTemplateOutlet="top; topViewContext: topViewContext"
+    ></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #innerRight>
+  <div *ngIf="rightViewContext">
+    <ng-container
+      *ngTemplateOutlet="right; rightViewContext: rightViewContext"
+    ></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #innerBottom>
+  <div *ngIf="bottomViewContext">
+    <ng-container
+      *ngTemplateOutlet="bottom; bottomViewContext: bottomViewContext"
+    ></ng-container>
+  </div>
+</ng-template>
+
+<div class="layout">
+  <ng-container *ngIf="left && top && right && bottom">
+    <div class="layout-4">
+      <div class="layout-top">
+        <ng-container *ngTemplateOutlet="innerTop"></ng-container>
+      </div>
+      <div class="layout-center">
+        <div class="layout-left">
+          <ng-container *ngTemplateOutlet="innerLeft"></ng-container>
+        </div>
+        <div class="layout-right">
+          <ng-container *ngTemplateOutlet="innerRight"></ng-container>
+        </div>
+      </div>
+      <div class="layout-bottom">
+        <ng-container *ngTemplateOutlet="innerBottom"></ng-container>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="left && top && bottom && !right">
+    <div class="layout-3left">
+      <div class="layout-left">
+        <ng-container *ngTemplateOutlet="innerLeft"></ng-container>
+      </div>
+      <div class="layout-top">
+        <ng-container *ngTemplateOutlet="innerTop"></ng-container>
+      </div>
+      <div class="layout-bottom">
+        <ng-container *ngTemplateOutlet="innerBottom"></ng-container>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="top && right && bottom && !left">
+    <div class="layout-3right">
+      <div class="layout-top">
+        <ng-container *ngTemplateOutlet="innerTop"></ng-container>
+      </div>
+      <div class="layout-right">
+        <ng-container *ngTemplateOutlet="innerRight"></ng-container>
+      </div>
+      <div class="layout-bottom">
+        <ng-container *ngTemplateOutlet="innerBottom"></ng-container>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="top && bottom && !left && !right">
+    <div class="layout-2top">
+      <div class="layout-top">
+        <ng-container *ngTemplateOutlet="innerTop"></ng-container>
+      </div>
+      <div class="layout-bottom">
+        <ng-container *ngTemplateOutlet="innerBottom"></ng-container>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="left && right && !top && !bottom">
+    <div class="layout-2left">
+      <div class="layout-left">
+        <ng-container *ngTemplateOutlet="innerLeft"></ng-container>
+      </div>
+      <div class="layout-right">
+        <ng-container *ngTemplateOutlet="innerRight"></ng-container>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="top && !right && !left && !bottom">
+    <div class="layout-1">
+      <div class="layout-top">
+        <ng-container *ngTemplateOutlet="innerTop"></ng-container>
+      </div>
+    </div>
+  </ng-container>
+</div>
