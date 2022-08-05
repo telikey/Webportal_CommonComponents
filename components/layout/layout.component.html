@@ -1,32 +1,44 @@
 <ng-template #innerLeft>
   <div *ngIf="leftViewContext">
-    <ng-container
-      *ngTemplateOutlet="left; leftViewContext: leftViewContext"
-    ></ng-container>
+    <div class="layout-template-left">
+      <ng-container
+        *ngTemplateOutlet="left"
+        [*ngTemplateOutletLeftViewContext]="leftViewContext"
+      ></ng-container>
+    </div>
   </div>
 </ng-template>
 
 <ng-template #innerTop>
   <div *ngIf="topViewContext">
-    <ng-container
-      *ngTemplateOutlet="top; topViewContext: topViewContext"
-    ></ng-container>
+    <div class="layout-template-top">
+      <ng-container
+        *ngTemplateOutlet="top"
+        [*ngTemplateOutletTopViewContext]="topViewContext"
+      ></ng-container>
+    </div>
   </div>
 </ng-template>
 
 <ng-template #innerRight>
   <div *ngIf="rightViewContext">
-    <ng-container
-      *ngTemplateOutlet="right; rightViewContext: rightViewContext"
-    ></ng-container>
+    <div class="layout-template-right">
+      <ng-container
+        *ngTemplateOutlet="right"
+        [*ngTemplateOutletRightViewContext]="rightViewContext"
+      ></ng-container>
+    </div>
   </div>
 </ng-template>
 
 <ng-template #innerBottom>
   <div *ngIf="bottomViewContext">
-    <ng-container
-      *ngTemplateOutlet="bottom; bottomViewContext: bottomViewContext"
-    ></ng-container>
+    <div class="layout-template-bottom">
+      <ng-container
+        *ngTemplateOutlet="bottom"
+        [*ngTemplateOutletBottomViewContext]="bottomViewContext"
+      ></ng-container>
+    </div>
   </div>
 </ng-template>
 

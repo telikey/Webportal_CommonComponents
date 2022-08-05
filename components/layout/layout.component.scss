@@ -11,52 +11,52 @@
   & .layout-2top {
     display: grid;
     grid-gap: 0;
-    height: 100vh;
-    grid-template-columns: 1fr;
+    height: 100%;
+    grid-template-columns: auto;
   }
   & .layout-2left {
     display: grid;
     grid-gap: 0;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    grid-template-columns: auto auto;
   }
 
   & .layout-3left {
     display: grid;
     grid-gap: 0;
-    height: 100vh;
-    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    grid-template-rows: auto auto auto;
     & .layout-center {
       display: grid;
       grid-gap: 0;
-      width: 100vw;
-      grid-template-columns: 1fr;
+      width: 100%;
+      grid-template-columns: auto;
     }
   }
 
   & .layout-3right {
     display: grid;
     grid-gap: 0;
-    height: 100vh;
-    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    grid-template-rows: auto auto auto;
     & .layout-center {
       display: grid;
       grid-gap: 0;
-      width: 100vw;
-      grid-template-columns: 1fr;
+      width: 100%;
+      grid-template-columns: auto;
     }
   }
 
   & .layout-4 {
     display: grid;
     grid-gap: 0;
-    height: 100vh;
-    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    grid-template-rows: auto auto auto;
     & .layout-center {
       display: grid;
       grid-gap: 0;
-      width: 100vw;
-      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      grid-template-columns: auto auto;
     }
   }
 }
